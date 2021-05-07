@@ -1,0 +1,22 @@
+{
+  "name": "vn_chat",
+  "version": "1.0.0",
+  "description": "VN Chat - fb.com/dean220899",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huy99ls01/VN_Chat.git"
+  },
+  "author": "Tran Quang Huy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huy99ls01/VN_Chat/issues"
+  },
+  "homepage": "https://github.com/huy99ls01/VN_Chat#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
