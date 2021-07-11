@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/huy99ls01/VN_Chat#readme",
   "dependencies": {
+    "bluebird": "^3.5.3",
     "express": "^4.17.1",
     "mongoose": "^4.13.9"
   },
