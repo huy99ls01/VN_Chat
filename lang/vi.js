@@ -3,17 +3,32 @@ export const transValidation = {
     gender_incorrect: "Sai thong tin gioi tinh",
     password_incorrect: "Mat khau phai chua it nhat 8 ky tu, bao gom cho hoa, chu thuong, chu so va ky tu",
     password_confirmation_incorrect: "mat khau khong giong nhau",
-}
+};
 
 
 export const transErrors = {
     account_in_use: "Email nay da duoc su dung",
     account_removed: "Account nay da bi go khoi he thong",
-    account_not_active: "Account da duoc tao nhung chua active"
-}
+    account_not_active: "Account da duoc tao nhung chua active",
+    token_undifined: "Token khong ton tai"
+};
 
 export const transSuccess = {
     userCreated: (userEmail) => {
-        return `Account <strong>${userEmail}</strong> da duoc tao`;
-    }
+        return `Account <strong>${userEmail}</strong> da duoc tao, active tai email`;
+    },
+    account_actived: "Kich hoat thanh cong"
+};
+
+export const  transMail = {
+    subject: "VN CHAT: Xac nhan kich hoat tai khoan",
+    template: (linkVerify) => { 
+        return `
+            <h2>Ban nhan duoc email nay vi da dang ky tai khoan voi VN_CHAT</h2>
+            <h3>Click vao link ben duoi de xac nhan kich hoat tai khoan</h3>
+            <h3><a href="${linkVerify}" target="blank">${linkVerify}</a></h3>
+            <h4>Have fun suckerrrrrrr</h4>
+        `
+    },
+    send_failed: "Co loi trong qua trinh gui mail",
 }
