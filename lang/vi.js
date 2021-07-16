@@ -10,14 +10,19 @@ export const transErrors = {
     account_in_use: "Email nay da duoc su dung",
     account_removed: "Account nay da bi go khoi he thong",
     account_not_active: "Account da duoc tao nhung chua active",
-    token_undifined: "Token khong ton tai"
+    token_undifined: "Token khong ton tai",
+    login_failed: "Sai tai khoan hoac mat khau",
+    server_error: "Co loi o phia server, xin thu lai sau"
 };
 
 export const transSuccess = {
     userCreated: (userEmail) => {
         return `Account <strong>${userEmail}</strong> da duoc tao, active tai email`;
     },
-    account_actived: "Kich hoat thanh cong"
+    account_actived: "Kich hoat thanh cong",
+    loginSuccess: (username) => {
+        return `Xin chao ${username}, have fun suckerr`
+    }
 };
 
 export const  transMail = {
