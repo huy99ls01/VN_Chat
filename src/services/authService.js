@@ -16,15 +16,15 @@ let register = (email, gender, password, protocol, host) => {
         if (userByEmail) {
 
             if (userByEmail.deletedAt != null) { 
-                return reject(transErrors.account_removed)
+                return reject(transErrors.account_removed);
             }
 
             if (!userByEmail.local.isActive) { 
-                return reject(transErrors.account_not_active)
+                return reject(transErrors.account_not_active);
             }
 
             return reject(transErrors.account_in_use);
-        }
+        };
 
         let salt = bcrypt.genSaltSync(saltRounds);
 
@@ -36,7 +36,7 @@ let register = (email, gender, password, protocol, host) => {
                 password: bcrypt.hashSync(password, salt),
                 verifyToken: uuidv4(),
             }
-        }
+        };
 
         let user = await UserModel.createNew(userItem);
         let linkVerify = `${protocol}://${host}/verify/${user.local.verifyToken}`;
