@@ -19,16 +19,12 @@ let UserSchema = new Schema({
     facebook: { 
         uid: String,
         token: String,
-        email: {
-            email: {type: String, trim: true},
-        }
+        email: {type: String, trim: true}
     },
     google: { 
         uid: String,
         token: String,
-        email: {
-            email: {type: String, trim: true},
-        }
+        email: {type: String, trim: true}
     },
     createdAt: {type: Number, default: Date.now},
     updatedAt: {type: Number, default: null},
@@ -59,6 +55,9 @@ UserSchema.statics = {
     },
     findByFacebookUid(uid) {
         return this.findOne({"facebook.uid": uid}).exec();
+    },
+    findByGoogleUid(uid) { 
+        return this.findOne({"google.uid": uid}).exec();
     }
 };
 

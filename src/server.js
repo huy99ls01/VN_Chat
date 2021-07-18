@@ -70,7 +70,7 @@ pem.createCertificate({ days: 1, selfSigned: true }, function (err, keys) {
    
     https.createServer({ key: keys.serviceKey, cert: keys.certificate }, app).listen(process.env.APP_PORT, process.env.APP_HOST, () => {
         console.log(`Hello, Running at ${ process.env.APP_HOST }:${ process.env.APP_PORT }/`);
-    });
+    }); 
   })
 
 
