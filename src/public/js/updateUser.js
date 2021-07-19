@@ -20,7 +20,7 @@ function updateUserInfo() {
             return false;
         }
 
-        console.log(fileData);
+        //console.log(fileData);
         if (typeof (FileReader) != "undefined") {
             let imagePreview = $("#image-edit-profile");
             imagePreview.empty();
@@ -86,20 +86,40 @@ $(document).ready(function() {
             processData: false,
             data: userAvatar,
             success: function(result) {
-                //
+                console.log(result);
+
+                // Display success
+                $(".user-modal-alert-success").find("span").text(result.message)
+                $(".user-modal-alert-success").css("display", "block")
+                
+                // Update navbar avatar
+                $("#navbar-avatar").attr("src", result.imageSrc);
+
+                // Update origin avatar src
+                originAvatarSrc = result.imageSrc;
+
+                // reset all
+                $("#input-btn-cancel-update-user").click();
             },
             error: function(error) {
-                //
+
+                // Display errors
+                $(".user-modal-alert-error").find("span").text(error.responseText)
+                $(".user-modal-alert-error").css("display", "block")
+
+                // reset all
+                $("#input-btn-cancel-update-user").click();
             }
         });
 
-        console.log(userAvatar);
-        console.log(userInfo);
+        //console.log(userAvatar);
+        //console.log(userInfo);
     });
 
-    $("#input-btn-cancel-update-user").bind("click", function() { 
+    $("#input-btn-cancel-update-user").bind("click", function() {
         userAvatar = null;
         userInfo = {};
+        $("#input-change-avatar").val(null);
         $("#user-modal-avatar").attr("src", originAvatarSrc);
     });
 });
