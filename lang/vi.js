@@ -3,6 +3,10 @@ export const transValidation = {
     gender_incorrect: "Sai thong tin gioi tinh",
     password_incorrect: "Mat khau phai chua it nhat 8 ky tu, bao gom cho hoa, chu thuong, chu so va ky tu",
     password_confirmation_incorrect: "mat khau khong giong nhau",
+    update_username: "User name gioi han trong khoang 3-17 ky tu va khong duoc phep chua ki tu dac biet",
+    update_gender: "Du lieu gioi tinh co van de",
+    update_address: "Dia chi gioi tinh trong khoang 3-30 ky tu",
+    update_phone: "So dien thoai phai la so dien thoai vietnam, gioi han trong khoang 10-11 so",
 };
 
 
@@ -26,7 +30,7 @@ export const transSuccess = {
         return `Xin chao ${username}, have fun suckerr`
     },
     logout_success: "Dang xuat tai khoan thanh cong, see ya later",
-    avatar_updated: "Cap nhap anh dai dien thanh cong"
+    user_info_updated: "Cap nhap thong tin thanh cong"
 };
 
 export const  transMail = {
