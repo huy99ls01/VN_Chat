@@ -14,11 +14,13 @@ export const transErrors = {
     account_in_use: "Email nay da duoc su dung",
     account_removed: "Account nay da bi go khoi he thong",
     account_not_active: "Account da duoc tao nhung chua active",
-    token_undifined: "Token khong ton tai",
+    account_undefined: "Tai khoan khong ton tai",
+    token_undifined: "Tuser_password_updatedoken khong ton tai",
     login_failed: "Sai tai khoan hoac mat khau",
     server_error: "Co loi o phia server, xin thu lai sau",
     avatar_type: "Kieu File khong hop le, chi chap nhan jpg, png & jpeg",
-    avatar_size: "File upload toi da cho phep la 1MB"
+    avatar_size: "File upload toi da cho phep la 1MB",
+    user_current_password_failed: "Mat khau hien tai khong chinh xac",
 };
 
 export const transSuccess = {
@@ -30,7 +32,8 @@ export const transSuccess = {
         return `Xin chao ${username}, have fun suckerr`
     },
     logout_success: "Dang xuat tai khoan thanh cong, see ya later",
-    user_info_updated: "Cap nhap thong tin thanh cong"
+    user_info_updated: "Cap nhap thong tin thanh cong",
+    user_password_updated: "Cap nhap mat khau thanh cong"
 };
 
 export const  transMail = {
