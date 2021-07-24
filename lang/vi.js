@@ -7,6 +7,7 @@ export const transValidation = {
     update_gender: "Du lieu gioi tinh co van de",
     update_address: "Dia chi gioi tinh trong khoang 3-30 ky tu",
     update_phone: "So dien thoai phai la so dien thoai vietnam, gioi han trong khoang 10-11 so",
+    keyword_find_user: "Loi tu khoa tim kiem, chi chua chu cai va cac so"
 };
 
 
