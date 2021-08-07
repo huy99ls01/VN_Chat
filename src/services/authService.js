@@ -45,13 +45,12 @@ let register = (email, gender, password, protocol, host) => {
             .then(success => {
                 resolve(transSuccess.userCreated(user.local.email));
             })
-            .cath(async (error) => {
+            .catch(async (error) => {
                 // remove user
                 await UserModel.removeById(user._id);
                 console.log(error);
                 reject(transMail.send_failed);
             });
-        
     });
     
 };
@@ -59,10 +58,12 @@ let register = (email, gender, password, protocol, host) => {
 
 let verifyAccount = (token) => {
     return new Promise(async (resolve, reject) => {
-        let userByToken = await UserModel.verifyToken;
+        let userByToken = await UserModel.findByToken(token);
         if (!userByToken) { 
+            console.log(userByToken);
             return reject(transErrors.token_undifined);
         }
+        console.log(userByToken);
         await UserModel.verify(token);
         resolve(transSuccess.account_actived);
     });
